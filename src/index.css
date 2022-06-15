@@ -1,13 +1,301 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Anton", sans-serif;
+  color: black;
+  font-size: 16px;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 58px;
+  letter-spacing: 00.1em;
+}
+
+h3 {
+  font-size: 25px;
+  /* margin-bottom: 28px; */
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  background: url(./img/GroesBild_RCCL_harmo.jpg);
+  background-size: cover;
+  /* background-position: 100% 100%;
+    background-color: #464646;
+    padding-top: 30px;
+    min-width: 100%; */
+  /* width: 100%;
+	height: auto; */
+  /* background-color: aqua; */
+}
+
+.grid {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: 1fr 2fr 3fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 4fr;
+  grid-template-areas:
+    "nav nav nav"
+    ". . ."
+    ". text . "
+    ". click . "
+    ". . .";
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em 1em 0 1em;
+}
+
+.name {
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 2em;
+}
+
+h1 {
+  padding-top: 0.75em;
+}
+
+.tel {
+  text-decoration: none;
+  grid-area: phone;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding-top: 0.75em;
+  color: black;
+}
+
+.offer {
+  grid-area: text;
+}
+
+.btn-div {
+  grid-area: click;
+}
+
+.btn-link {
+  margin-left: 2em;
+  display: block;
+  text-align: center;
+  color: black;
+  font-size: 17px;
+  font-weight: 525;
+  padding: 12px 17px;
+  letter-spacing: 0.1em;
+  background-color: rgba(225, 225, 225, 0.3);
+  border: 1.5px solid rgb(0, 0, 0);
+  width: 50%;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.btn-link:hover {
+  background: #fff;
+  opacity: 0.9;
+  color: #000;
+}
+
+.mainContent {
+  background-image: linear-gradient(
+    to bottom right,
+    #fff,
+    rgba(35, 181, 241, 0.57)
+  );
+}
+
+.description {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  grid-template-areas: "left right";
+}
+
+.description div label {
+  border-top: 2px solid black;
+  padding: 0 10px 0 10px;
+  font-size: 24px;
+}
+
+.desc-left {
+  grid-area: left;
+  padding-left: 1em;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery div {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+img {
+  padding: 1%;
+}
+
+.img1 {
+  width: 70%;
+}
+
+.img2 {
+  width: 70%;
+}
+.img3 {
+  width: 50%;
+}
+
+.desc-right {
+  grid-area: right;
+  margin-right: 5em;
+  /* display: flex;
+  flex-direction: column; */
+}
+.descText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  padding-left: 3em;
+}
+.responsive {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.exchenger form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.Price {
+  letter-spacing: 0.05em;
+}
+
+select {
+  background-color: rgba(115, 169, 190, 0.57);
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px 2px 5px;
+  height: 15%;
+  border: 1px solid black;
+  font-size: large;
+  transition: all 0.25s ease;
+  margin-left: 0.5em;
+  outline: none;
+}
+
+select:focus {
+  border: 1px solid black;
+}
+
+select:hover {
+  background-color: rgba(35, 181, 241, 0.57);
+}
+
+.inputExchenger {
+  margin: 1em;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 6px 8px;
+  outline: none;
+  text-align: center;
+  border: 1px solid rgb(161, 161, 161);
+}
+
+.inputExchenger:focus {
+  border: 1px solid rgb(87, 102, 236);
+}
+
+.buttonMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn2 {
+  grid-area: click;
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  padding: 12px 12px;
+  letter-spacing: 0.1em;
+  background-color: white;
+  opacity: 0.8;
+  border: 1px solid rgb(0, 0, 0);
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn2:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.formComments {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1em;
+}
+
+.Post {
+  background-color: #fff;
+  width: 20%;
+  height: 15em;
+}
+
+.stars {
+  padding-top: 4%;
+}
+
+.textPost {
+  font-size: small;
+}
+
+footer {
+  background-color: white;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

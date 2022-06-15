@@ -1,0 +1,54 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+.App {
+  text-align: center;
+  width: 100%;
+}
+.Media {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.SocialMedia {
+  display: flex;
+  width: 60%;
+}
+.Gmail {
+  width: 30%;
+}
+.Footer {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-around;
+  background-color: black;
+}
+.NameCompanyFooter{
+  width: 20%;
+  color: white;
+}
+.Footer div h4{
+  color: #D23131;
+}
+.Original {
+  width: 20%;
+  color: azure;
+}
