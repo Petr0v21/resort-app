@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import CreatePost from "./CreatePost/CreatePost";
+import React from "react";
 import { Exchenge } from "./Exchange";
 import img1 from "../img/slide_2.jpg";
 import img2 from "../img/slide_4.jpg";
@@ -7,7 +6,6 @@ import img3 from "../img/slide_3.jpg";
 import Comments from "./Comments";
 
 const MainContent = () => {
-  const [activeModal, setActiveModal] = useState(false);
   return (
     <div className="mainContent">
       <div className="description">
@@ -34,12 +32,16 @@ const MainContent = () => {
           </div>
           <Exchenge />
           <div className="buttonMain">
-            <div className="btn2" onClick={() => setActiveModal(true)}>
+            <a
+              href="https://www.instagram.com/na_oochi/"
+              className="btn2"
+              target="_blank"
+              rel="noreferrer"
+            >
               submit your application
-            </div>
+            </a>
           </div>
         </div>
-        <CreatePost active={activeModal} setActive={setActiveModal} />
       </div>
       <div className="formComments">
         <Comments />
