@@ -250,6 +250,8 @@ select:hover {
 }
 
 .btn2 {
+  text-decoration: none;
+  color: black;
   grid-area: click;
   display: block;
   text-align: center;
